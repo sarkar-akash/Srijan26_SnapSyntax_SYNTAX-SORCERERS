@@ -1,10 +1,9 @@
 import axios from 'axios';
 
 const api = axios.create({ 
-  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000/api'
+  baseURL: 'https://srijan26-snapsyntax-syntax-sorcerers.onrender.com/api'
 });
 
-// Automatically attach JSON Web Token from browser local storage to all outgoing Auth headers
 api.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem('token');
