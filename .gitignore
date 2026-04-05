@@ -1,0 +1,4 @@
+# Node and Vite git ignores
+node_modules
+dist
+.env
