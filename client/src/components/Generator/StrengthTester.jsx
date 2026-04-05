@@ -8,8 +8,8 @@ const StrengthTester = () => {
   const stats = analyzePassword(password);
 
   return (
-    <div className="max-w-3xl w-full mx-auto space-y-12">
-      <div className="bg-surface-container p-10 rounded-[2rem] space-y-10 relative overflow-hidden">
+    <div className="max-w-3xl w-full mx-auto space-y-8 md:space-y-12 px-2 md:px-0">
+      <div className="bg-surface-container p-6 md:p-10 rounded-[1.5rem] md:rounded-[2rem] space-y-8 md:space-y-10 relative overflow-hidden">
         {/* Atmospheric Glow Decor */}
         <div className="absolute -top-24 -right-24 w-64 h-64 bg-primary/5 blur-[80px] rounded-full"></div>
         <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-primary/5 blur-[80px] rounded-full"></div>
@@ -22,7 +22,7 @@ const StrengthTester = () => {
                 type={showPassword ? "text" : "password"}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full bg-surface-container-low text-[#E8EEF4] font-mono text-xl md:text-3xl py-6 px-4 md:px-14 rounded-2xl border-none outline-none focus:bg-surface-container-high transition-all text-center tracking-widest placeholder:text-outline/30 placeholder:tracking-normal placeholder:font-body" 
+                className="w-full bg-surface-container-low text-[#E8EEF4] font-mono text-lg sm:text-xl md:text-3xl py-4 md:py-6 px-4 md:px-14 rounded-2xl border-none outline-none focus:bg-surface-container-high transition-all text-center tracking-widest placeholder:text-outline/30 placeholder:tracking-normal placeholder:font-body" 
                 placeholder="Type to analyze..." 
               />
               <button 
@@ -53,9 +53,9 @@ const StrengthTester = () => {
           </div>
           
           {/* Hero Metric: Crack Time */}
-          <div className="flex flex-col items-center justify-center p-8 bg-surface-container-low rounded-2xl border border-outline-variant/10">
+          <div className="flex flex-col items-center justify-center p-6 md:p-8 bg-surface-container-low rounded-2xl border border-outline-variant/10">
             <span className="text-on-surface-variant text-sm font-medium mb-1">Estimated Crack Time</span>
-            <span className="font-headline text-5xl md:text-6xl font-extrabold text-[#E8EEF4] tracking-tight text-center">
+            <span className="font-headline text-3xl sm:text-5xl md:text-6xl font-extrabold text-[#E8EEF4] tracking-tight text-center">
               {stats.crackTime.value} <span className="text-xl md:text-2xl text-on-surface-variant font-normal">{stats.crackTime.unit}</span>
             </span>
             {stats.level === 'Exceptional' && (
@@ -89,8 +89,8 @@ const StrengthTester = () => {
       </div>
       
       {/* Bento Tips Section */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pb-20">
-        <div className="bg-surface-container-low p-8 rounded-3xl border border-outline-variant/5 space-y-4 z-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 pb-20">
+        <div className="bg-surface-container-low p-6 md:p-8 rounded-3xl border border-outline-variant/5 space-y-4 z-10">
           <div className="w-12 h-12 rounded-2xl bg-secondary-container/30 flex items-center justify-center">
             <span className="material-symbols-outlined text-secondary" style={{ fontVariationSettings: "'FILL' 1" }}>lightbulb</span>
           </div>

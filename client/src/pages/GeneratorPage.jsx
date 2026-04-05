@@ -76,8 +76,8 @@ const GeneratorPage = () => {
   }, []);
 
   return (
-    <div className="max-w-[1400px] mx-auto px-4 md:px-6 lg:px-12 py-10 lg:pt-16 lg:pb-12 h-screen flex flex-col">
-      <header className="mb-10 shrink-0 flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+    <div className="max-w-[1400px] mx-auto px-4 md:px-6 lg:px-12 py-10 lg:pt-16 lg:pb-12 min-h-screen flex flex-col">
+      <header className="mb-6 md:mb-10 shrink-0 flex flex-col lg:flex-row lg:items-end justify-between gap-6">
         <div>
           <h1 className="text-3xl md:text-4xl font-headline font-extrabold text-[#E8EEF4] tracking-tight mb-2">
             {activeTab === 'generator' ? 'Password Generator' : 'Strength Tester'}
@@ -181,8 +181,8 @@ const GeneratorPage = () => {
       </header>
 
       {activeTab === 'generator' ? (
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 flex-1 min-h-0">
-          <div className="lg:col-span-7 space-y-6 overflow-y-auto pr-2 custom-scrollbar pb-16 lg:pb-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 flex-1">
+          <div className="lg:col-span-7 space-y-6 md:overflow-y-auto pr-0 md:pr-2 custom-scrollbar pb-8 md:pb-16 lg:pb-6">
             <OutputDisplay password={currentPassword} strength={currentStrength} />
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -197,7 +197,7 @@ const GeneratorPage = () => {
           <BatchHistory history={history} onClear={handleClearHistory} />
         </div>
       ) : (
-        <div className="flex-1 min-h-0 overflow-y-auto custom-scrollbar pb-16">
+        <div className="flex-1 md:overflow-y-auto custom-scrollbar pb-8 md:pb-16">
           <StrengthTester />
         </div>
       )}

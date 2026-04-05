@@ -6,7 +6,7 @@ const BatchHistory = ({ history, onClear }) => {
   };
 
   return (
-    <div className="lg:col-span-5 flex flex-col h-[600px] lg:h-full">
+    <div className="lg:col-span-5 flex flex-col h-auto lg:h-full">
       <div className="bg-surface-container-low rounded-2xl flex-1 flex flex-col border border-outline-variant/5 overflow-hidden">
         <div className="p-6 border-b border-outline-variant/10 flex justify-between items-center shrink-0">
           <h3 className="font-bold text-on-surface flex items-center gap-2 text-base">
@@ -21,7 +21,7 @@ const BatchHistory = ({ history, onClear }) => {
           </button>
         </div>
         
-        <div className="max-h-64 overflow-y-auto p-6 space-y-3 custom-scrollbar">
+        <div className="max-h-80 md:max-h-64 overflow-y-auto p-4 md:p-6 space-y-3 custom-scrollbar">
           {history.length === 0 && (
             <p className="text-on-surface-variant text-sm text-center mt-4">No passwords generated yet.</p>
           )}
@@ -50,7 +50,7 @@ const BatchHistory = ({ history, onClear }) => {
       </div>
 
       {/* Security Insight Card */}
-      <div className="mt-6 p-6 rounded-2xl bg-gradient-to-br from-[#1c2026] to-[#10141a] border border-outline-variant/10 shrink-0">
+      <div className="mt-4 md:mt-6 p-6 rounded-2xl bg-gradient-to-br from-[#1c2026] to-[#10141a] border border-outline-variant/10 shrink-0">
         <div className="flex gap-4">
           <div className="w-12 h-12 rounded-xl bg-tertiary-container/20 flex items-center justify-center shrink-0">
             <span className="material-symbols-outlined text-tertiary">security</span>

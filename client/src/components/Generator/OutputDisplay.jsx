@@ -12,10 +12,10 @@ const OutputDisplay = ({ password, strength }) => {
   };
 
   return (
-    <div className="bg-surface-container-low p-8 rounded-2xl shadow-xl border border-outline-variant/5">
+    <div className="bg-surface-container-low p-6 md:p-8 rounded-2xl shadow-xl border border-outline-variant/5">
       <div className="relative group">
-        <div className="w-full bg-surface-container-highest p-6 rounded-xl border-b-2 border-primary/40 flex items-center justify-between">
-          <span className="monospace-font text-2xl md:text-3xl font-medium text-primary tracking-wider truncate">
+        <div className="w-full bg-surface-container-highest p-4 md:p-6 rounded-xl border-b-2 border-primary/40 flex items-center justify-between min-w-0">
+          <span className="monospace-font text-xl sm:text-2xl md:text-3xl font-medium text-primary tracking-wider truncate flex-1 min-w-0">
             {password || '----------------'}
           </span>
           <div className="flex items-center gap-2">
@@ -30,7 +30,7 @@ const OutputDisplay = ({ password, strength }) => {
         </div>
       </div>
 
-      <div className="mt-8">
+      <div className="mt-4 md:mt-8">
         <div className="flex justify-between items-end mb-3">
           <span className="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Security Strength</span>
           <span className="text-sm font-bold text-primary">{strength.label}</span>
